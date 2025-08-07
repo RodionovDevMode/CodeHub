@@ -1,0 +1,1 @@
+(()=>{"use strict";document.body.innerHTML="<div style='background: yellow'>Hello World<div/>"})();
