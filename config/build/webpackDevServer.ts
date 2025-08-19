@@ -7,5 +7,6 @@ export function webpackDevServer(
 	return {
 		port: options.port,
 		open: true,
+		historyApiFallback: true,
 	}
 }
