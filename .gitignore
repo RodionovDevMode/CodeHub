@@ -1,7 +1,11 @@
 # macOS system files
 .DS_Store
+
+# IDE
 .idea
-/node_modules
-/build
 
+# Dependencies
+node_modules/
 
+# Build
+build/
