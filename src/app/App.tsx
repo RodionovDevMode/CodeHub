@@ -1,10 +1,10 @@
 import { Suspense } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import { AboutPageLazy } from './components/pages/AboutPage/AboutPage.lazy'
-import { MainPagLazy } from './components/pages/MainPage/MainPage.lazy'
 import './styles/index.scss'
-import { useTheme } from './theme/useTheme'
 import { classNames } from './styles/classNames/classNames'
+import { AboutPage } from 'pages/AboutPage'
+import { MainPage } from 'pages/MainPage'
+import { useTheme } from 'app/providers/ThemeProvider'
 
 function App() {
 	const { theme, toggleTheme } = useTheme()
@@ -18,8 +18,8 @@ function App() {
 			<Link to={'/about'}>О сайте</Link>
 			<Suspense fallback={<div>Загрузка...</div>}>
 				<Routes>
-					<Route path={'/about'} element={<AboutPageLazy />} />
-					<Route path={'/'} element={<MainPagLazy />} />
+					<Route path={'/about'} element={<AboutPage />} />
+					<Route path={'/'} element={<MainPage />} />
 				</Routes>
 			</Suspense>
 		</div>
