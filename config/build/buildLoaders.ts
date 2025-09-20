@@ -15,6 +15,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
 			{
 				loader: 'css-loader',
 				options: {
+					esModule: true,
 					modules: {
 						auto: (resPath: string) => resPath.includes('.module.'),
 						localIdentName: isDev
