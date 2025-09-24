@@ -1,12 +1,10 @@
-import './styles/index.scss'
-import { classNames } from '../shared/lib/classNames/classNames'
 import { useTheme } from 'app/providers/ThemeProvider'
-import { AppRouter } from './providers/ThemeProvider/router'
-import { Sidebar } from 'widgets/Sidebar'
-import Navbar from 'widgets/Navbar/ui/Navbar'
 import { Suspense } from 'react'
-import { useTranslation } from 'react-i18next'
-import { LangSwitcher } from 'widgets/LangSwitcher'
+import Navbar from 'widgets/Navbar/ui/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
+import { classNames } from '../shared/lib/classNames/classNames'
+import { AppRouter } from './providers/ThemeProvider/router'
+import './styles/index.scss'
 
 function App() {
 	const { theme, toggleTheme } = useTheme()
